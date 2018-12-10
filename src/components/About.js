@@ -1,4 +1,5 @@
 import React from 'react'
+import Colours from '../hoc/Colours'
 
 const About = () => {
   return (
@@ -14,4 +15,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Colours(About)

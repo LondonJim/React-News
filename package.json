@@ -23,7 +23,7 @@
     "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage",
     "eject": "react-scripts eject"

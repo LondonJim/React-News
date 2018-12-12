@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 
 class Home extends Component {
   render() {
-    console.log(this.props)
     const { posts } = this.props
     const postList = posts.length ? (
       posts.map(post => {
@@ -16,7 +15,7 @@ class Home extends Component {
               <Link to={'/' + post.id}>
                 <span className="card-title blue-text">{post.title}</span>
               </Link>
-              <p>{post.body}</p>
+              <p>{post.content}</p>
             </div>
           </div>
         )

@@ -1,12 +1,10 @@
 import React from 'react'
+import Colours from '../hoc/Colours'
 
-const Contact = (props) => {
-  // setTimeout(() => {
-  //   props.history.push('/about')
-  // }, 2000)
+const Contact = () => {
   return (
     <div className="container">
-      <h4 className="center">Contact</h4>
+      <h4 className="center black-text">Contact</h4>
       <p>Velit mandaremus se fore aliqua, ne quem sempiternum iis quid ingeniis quamquam,
       summis eu cupidatat. Ita pariatur instituendarum, ubi aute expetendis est summis
       singulis ita distinguantur de in consequat est proident an velit admodum
@@ -17,4 +15,4 @@ const Contact = (props) => {
   )
 }
 
-export default Contact
+export default Colours(Contact)

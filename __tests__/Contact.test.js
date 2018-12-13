@@ -9,7 +9,7 @@ describe("Contact", () => {
   it("should render About title",() => {
     const wrapper = mount(<Contact />)
 
-    expect(wrapper.contains(<h4 className="center">Contact</h4>)).toEqual(true)
+    expect(wrapper.contains(<h4 className="center black-text">Contact</h4>)).toEqual(true)
   });
 
 });

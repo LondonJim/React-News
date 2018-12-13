@@ -9,7 +9,7 @@ describe("Home", () => {
   it("should render About title",() => {
     const wrapper = mount(<Home />)
 
-    expect(wrapper.contains(<h4 className="center">Home</h4>)).toEqual(true)
+    expect(wrapper.contains(<h4 className="center">Recent Posts</h4>)).toEqual(true)
   });
 
 });

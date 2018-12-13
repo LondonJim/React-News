@@ -5,11 +5,7 @@ const About = () => {
   return (
     <div className="container">
       <h4 className="center black-text">About</h4>
-      <p>Velit mandaremus se fore aliqua, ne quem sempiternum iis quid ingeniis quamquam,
-      summis eu cupidatat. Ita pariatur instituendarum, ubi aute expetendis est summis
-      singulis ita distinguantur de in consequat est proident an velit admodum
-      singulis, quo de efflorescere, ubi quis minim aliqua ullamco ne mentitum legam
-      export singulis velit.
+      <p>This app is owned and operated by **********.
       </p>
     </div>
   )

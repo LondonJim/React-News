@@ -9,7 +9,7 @@ class Home extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://jsonplaceholder.typicode.com/posts')
+    axios.get('http://localhost:3000/articles')
       .then(res => {
         this.setState({
           posts: res.data.slice(0, 10)
@@ -38,7 +38,7 @@ class Home extends Component {
     )
     return (
       <div className="container home">
-        <h4 className="center">Home</h4>
+        <h4 className="center">Recent Posts</h4>
         {postList}
       </div>
     )

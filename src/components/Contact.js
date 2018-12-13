@@ -6,7 +6,7 @@ const Contact = (props) => {
   // }, 2000)
   return (
     <div className="container">
-      <h4 className="center">Contact</h4>
+      <h4 className="center black-text">Contact</h4>
       <p>Velit mandaremus se fore aliqua, ne quem sempiternum iis quid ingeniis quamquam,
       summis eu cupidatat. Ita pariatur instituendarum, ubi aute expetendis est summis
       singulis ita distinguantur de in consequat est proident an velit admodum

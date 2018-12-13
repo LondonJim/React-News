@@ -8,7 +8,7 @@ class Post extends Component {
 
   componentDidMount(){
     let id = this.props.match.params.post_id
-    axios.get('http://jsonplaceholder.typicode.com/posts/' + id)
+    axios.get('http://localhost:3000/articles/' + id)
       .then(res => {
         this.setState ({
           post: res.data
@@ -16,12 +16,24 @@ class Post extends Component {
       })
   }
 
+  handleClick = () => {
+    let id = this.props.match.params.post_id
+    window.confirm("Are you sure?") ? (
+    axios.delete('http://localhost:3000/articles/' + id)
+      .then(res => {
+        this.props.history.push('/')
+      })
+    ) : (
+      window.alert("Cancelled")
+    )
+  }
+
   render() {
 
     const post = this.state.post ? (
       <div className="post">
         <h4 className="center">{this.state.post.title}</h4>
-        <p>{this.state.post.body}</p>
+        <p>{this.state.post.content}</p>
       </div>
     ) : (
       <div className="center">Loading post...</div>
@@ -30,6 +42,7 @@ class Post extends Component {
     return (
       <div className="container">
         { post }
+        <button className="center btn grey" onClick={this.handleClick}>Delete</button>
       </div>
     )
   }

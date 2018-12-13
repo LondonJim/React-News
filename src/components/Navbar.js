@@ -5,9 +5,10 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper blue darken-3">
       <div className="container">
-        <a className="brand-logo">React News</a>
+        <a className="brand-logo left">React News</a>
         <ul className="right">
           <li><Link to="/">Home</Link></li>
+          <li><NavLink to="/create_article">Create</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>

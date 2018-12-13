@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import AnimalLogo from '../animalLogo.png'
-import { connect } from 'react-redux'
 
 class Home extends Component {
+  state = {
+    posts: []
+  }
+
+  componentDidMount(){
+    axios.get('http://localhost:3000/articles')
+      .then(res => {
+        this.setState({
+          posts: res.data.slice(0, 10)
+        })
+      })
+  }
+
   render() {
-    const { posts } = this.props
+    const { posts } = this.state
     const postList = posts.length ? (
       posts.map(post => {
         return (
@@ -15,7 +28,7 @@ class Home extends Component {
               <Link to={'/' + post.id}>
                 <span className="card-title blue-text">{post.title}</span>
               </Link>
-              <p>{post.content}</p>
+              <p>{post.body}</p>
             </div>
           </div>
         )
@@ -25,17 +38,11 @@ class Home extends Component {
     )
     return (
       <div className="container home">
-        <h4 className="center">Home</h4>
+        <h4 className="center">Recent Posts</h4>
         {postList}
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts
-  }
-}
-
-export default connect(mapStateToProps)(Home)
+export default Home

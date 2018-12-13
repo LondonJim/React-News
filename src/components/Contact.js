@@ -1,7 +1,9 @@
 import React from 'react'
-import Colours from '../hoc/Colours'
 
-const Contact = () => {
+const Contact = (props) => {
+  // setTimeout(() => {
+  //   props.history.push('/about')
+  // }, 2000)
   return (
     <div className="container">
       <h4 className="center black-text">Contact</h4>
@@ -15,4 +17,4 @@ const Contact = () => {
   )
 }
 
-export default Colours(Contact)
+export default Contact
